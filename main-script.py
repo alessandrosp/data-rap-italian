@@ -20,6 +20,9 @@ def getAuthor(author):
     return soup
 
 def isFeat(div):
+    '''
+    Return True if the div contains the word "feat", otherwise False.
+    '''
     return 'feat' in div.get_text()
 
 def getLinks(soup, author):
