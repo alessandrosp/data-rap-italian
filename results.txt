@@ -1,0 +1,102 @@
+Unique words:
+Caparezza : 1905
+Jake La Furia : 1253
+Noyz Narcos : 1750
+Marracash : 1601
+Rocco Hunt : 1504
+Baby K : 1354
+Kaos : 1614
+Lowlow : NA
+Gemitaiz : 1349
+Salmo : 1670
+Er Costa : 1426
+Nitro : 1457
+Emis Killa : 1436
+Club Dogo : 1679
+Clementino : 1790
+Canesecco : 1286
+Gue Pequeno : 1327
+Fabri Fibra : 1530
+Fedez : 1520
+Madman : 1458
+Coez : 1285
+Truceboys : 1776
+
+Total words:
+Jake La Furia : 9589
+Noyz Narcos : 22867
+Marracash : 33963
+Rocco Hunt : 19780
+Baby K : 5773
+Kaos : 18487
+Lowlow : 1702
+Gemitaiz : 88876
+Salmo : 37802
+Er Costa : 6245
+Nitro : 28977
+Emis Killa : 44844
+Club Dogo : 46486
+Caparezza : 36932
+Clementino : 26630
+Canesecco : 8183
+Gue Pequeno : 29992
+Fabri Fibra : 105016
+Fedez : 42324
+Madman : 12779
+Coez : 13871
+Truceboys : 6100
+
+--Ex2
+Unique words:
+Caparezza : 7740
+Fabri Fibra : 5391
+Gemitaiz : 4288
+Marracash : NA
+Madman : NA
+Coez : NA
+Noyz Narcos : NA
+Club Dogo : 5540
+Fedez : 4710
+Er Costa : NA
+Truceboys : NA
+Canesecco : NA
+Lowlow : NA
+Salmo : 4969
+Emis Killa : 4194
+Nitro : NA
+Kaos : NA
+Baby K : NA
+Clementino : NA
+Jake La Furia : NA
+Rocco Hunt : NA
+Gue Pequeno : NA
+
+Total words:
+Caparezza : 36932
+Fabri Fibra : 105016
+Gemitaiz : 88876
+Marracash : 33963
+Madman : 12779
+Coez : 13871
+Noyz Narcos : 22867
+Club Dogo : 46486
+Fedez : 42324
+Er Costa : 6245
+Truceboys : 6100
+Canesecco : 8183
+Lowlow : 1702
+Salmo : 37802
+Emis Killa : 44844
+Nitro : 28977
+Kaos : 18487
+Baby K : 5773
+Clementino : 26630
+Jake La Furia : 9589
+Rocco Hunt : 19780
+Gue Pequeno : 29992
+
+--Ex1
+Club Dogo : 5582
+Emis Killa : 4204
+Noyz Narcos : NA
+Kaos : NA

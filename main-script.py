@@ -3,6 +3,11 @@ from bs4 import BeautifulSoup
 from collections import Counter
 import json
 import unicodedata
+import random
+import time
+
+tic = time.clock()
+print(tic)
 
 def getAuthor(author):
     '''
@@ -32,7 +37,7 @@ def getLinks(soup, author):
     '''
     Given a Author-soup (BeautifulSoup) extract all the non featuring songs links. Return a list.
     '''
-    
+    author = author.replace("+","_")
     divs = soup.find_all('div')
     links = []
     
@@ -80,24 +85,111 @@ def getLyrics(link):
     return clean_lyrics    
 
 if __name__ == "__main__":
-    #Specify the author(s)
-    author = "marracash"
-    
-    #Get the main HTML page
-    txt = getAuthor(author)
-    
-    #Parse the HTML page and extract links
-    links = getLinks(txt, author)
-    
-    #Iterate the links and extract lyrics
-    lyrics = ''
-    for link in links:
-        lyrics = getLyrics(link)+" "+lyrics
-    
-    #First link
-    #lyrics = getLyrics(links[4])
-    print(lyrics)
-    
-    results = Counter(lyrics.split(" "))
+    print("Step 1")
+    authors = ["baby+k",
+               "caparezza",
+               "emis+killa",
+               "noyz+narcos",
+               "club+dogo",
+               "kaos",
+               "gemitaiz",
+               "madman",
+               "canesecco",
+               "fabri+fibra",
+               "coez",
+               "gue+pequeno",
+               "jake+la+furia",
+               "er+costa",
+               "clementino",
+               "fedez",
+               "marracash",
+               "lowlow",
+               "rocco+hunt",
+               "salmo",
+               "nitro",
+               "truceboys",
+               "bassi+maestro",
+               "gemelli+diversi",
+               "mondo+marcio",
+               "articolo+31",
+               "j+ax",
+               "ensi",
+               "raige",
+               "lord+madness",
+               "huga+flame",
+               "caneda",
+               "ghemon",
+               "space+one",
+               "briga",
+               "dj+gruff",
+               "sottotono",
+               "metal+carter",
+               "lucci",
+               "mezzosangue",
+               "inoki",
+               "nesli",
+               "colle+der+formento",
+               "piotta",
+               "luche",
+               "santo+trafficante",
+               "moreno",
+               "two+fingerz",
+               "entics",
+               "babaman",
+               "jesto",
+               "danti",
+               "achille+lauro",
+               "joe+cassano",
+               "maxi+b",
+               "gente+de+borgata",
+               "duke+montana",
+               ]
+    print("Step 2")
+    results = {}
+    total_words = {}
+    print("Step 3")
+    for author in authors:
+        print("Step 4")
+        #Get the main HTML page
+        txt = getAuthor(author)
+        print("Step 5")
+        #Parse the HTML page and extract links
+        links = getLinks(txt, author)
+        print("Step 6")
+        #Iterate the links and extract lyrics
+        lyrics = ''
+        for link in links:
+            lyrics = getLyrics(link)+" "+lyrics
+        print("Step 7")    
+        words = lyrics.split(" ")
+        #while len(words) < 35000:
+        #    lyrics = lyrics+" "+lyrics
+        #    words = lyrics.split(" ")
+        if len(words) >= 10000:
+            sampled_words = random.sample(words, 10000)     
+            count_words = Counter(sampled_words)
+            results[author] = len(count_words)
+            total_words[author] = len(words)
+        else:
+            results[author] = "NA"
+            total_words[author] = len(words)
+        print("Just completed: "+author.replace("+"," ").title())
     #print(json.dumps(results, sort_keys = True, indent = 4, ensure_ascii=False))
-    print(json.dumps(sorted(results.items(), key=lambda item: item[1]), indent = 4, ensure_ascii=False))
+    #print(json.dumps(sorted(results.items(), key=lambda item: item[1]), indent = 4, ensure_ascii=False))
+    #print(len(words))
+    #print(len(sampled_words))
+    #print(len(results))
+    print("Last Step")
+    print("")
+    print("Unique words:") #PLEASE FIND A WAY TO SORT!
+    for key, value in results.items():
+        print(key.replace("+"," ").title()+" : "+str(value))
+    
+    print("")
+    print("Total words:")    
+    for key, value in total_words.items():
+            print(key.replace("+"," ").title()+" : "+str(value))        
+        
+    toc = time.clock()
+    ex_time = toc - tic
+    print(ex_time)
